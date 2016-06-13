@@ -87,9 +87,9 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
     }
 
     public void add(User user) {
-        if (!alreadyInAdapter(user)) {
-            this.contactList.add(user);
-            this.notifyDataSetChanged();
+        if (!contactList.contains(user)) {
+            contactList.add(user);
+            notifyDataSetChanged();
         }
     }
 
